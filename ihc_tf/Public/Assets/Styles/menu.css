@@ -1,63 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
-    --color-primary: #6C9BCF;
-    --color-danger: #FF0060;
-    --color-success: #1B9C85;
-    --color-warning: #F7D060;
-    --color-white: #fff;
-    --color-info-dark: #7d8da1;
-    --color-dark: #363949;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
+    /* Colores principales */
+    --color-primary: #6C9BCF; /* Color primario */
+    --color-danger: #FF0060; /* Color para errores */
+    --color-success: #1B9C85; /* Color para éxito */
+    --color-warning: #F7D060; /* Color para advertencias */
+    --color-white: #fff; /* Color blanco */
+    --color-info-dark: #7d8da1; /* Color para información oscura */
+    --color-dark: #363949; /* Color oscuro */
+    --color-light: rgba(132, 139, 200, 0.18); /* Color claro con opacidad */
+    --color-dark-variant: #677483; /* Variante de color oscuro */
+    --color-background: #f6f6f9; /* Color de fondo */
+    /* Radii y padding para las tarjetas */
+    --card-border-radius: 2rem; /* Radio de borde de las tarjetas */
+    --border-radius-1: 0.4rem; /* Radio de borde 1 */
+    --border-radius-2: 1.2rem; /* Radio de borde 2 */
 
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 1.2rem;
+    /* Padding para las tarjetas */
+    --card-padding: 1.8rem; /* Padding para tarjetas */
+    --padding-1: 1.2rem; /* Padding 1 */
 
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
+    /* Sombra de cajas */
+    --box-shadow: 0 2rem 3rem var(--color-light); /* Sombra para cajas */
 
-    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 
 
-
+/* Estilos para la sección derecha del encabezado */
 header .right-section{
-    align-items: flex-start;
-    align-self: flex-start;
-    gap: 15px;
-    display: flex;
-    padding: 0 1rem;
-
+     align-items: flex-start; /* Alineación de los elementos al inicio */
+    align-self: flex-start; /* Alineación del elemento al inicio */
+    gap: 15px; /* Espacio entre elementos */
+    display: flex; /* Display flex para organizar elementos */
+    padding: 0 1rem; /* Padding horizontal */
 }
 
 .logo{
-    z-index: 2;
+    z-index: 2; /* Asegura que la logo esté encima */
 }
 
 
+
+/* Estilos generales para el encabezado */
 header {
-    width: 100%;
-    height: 70px; 
-    background: #2B3D49; 
-    position: absolute;
-    display: flex;
-    align-items: center;
-    z-index: 1;
-    transition: .2s;
-    justify-content: space-between;
-    
+    width: 100%; /* Ancho completo */
+    height: 70px; /* Altura del encabezado */
+    background: #2B3D49; /* Color de fondo del encabezado */
+    position: absolute; /* Posicionamiento absoluto */
+    display: flex; /* Flexbox para organizar elementos */
+    align-items: center; /* Alineación centrada verticalmente */
+    z-index: 1; /* Z-index para apilar elementos */
+    transition: .2s; /* Transición suave para cambios */
+    justify-content: space-between; /* Espacio entre elementos */
 }
 
-header h2{
-
-
-    margin-left: -33rem;
-    color: white;
-    font-size: 2rem;
+/* Estilo para el título en el encabezado */
+header h2 {
+    margin-left: -33rem; /* Margen a la izquierda */
+    color: white; /* Color del texto */
+    font-size: 2rem; /* Tamaño de fuente */
 }
 
 /* Estilos para el contenedor del asistente virtual */
@@ -69,21 +72,20 @@ header h2{
     gap: 10px;
     
 }
+
 /* Estilos para el contenedor del asistente virtual */
 .chatbot {
-    
-    background-color: #E8E8E8;
-    border-radius: 15px;
-    display: flex;
-    gap: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    padding: 0 20px;
-    grid-column: span 2;
-    z-index: 100;
-    
-    
+    background-color: #E8E8E8; /* Color de fondo del chatbot */
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex; /* Flexbox para organizar elementos */
+    gap: 20px; /* Espacio entre elementos */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+    width: 100%; /* Ancho completo */
+    max-width: 600px; /* Ancho máximo */
+    padding: 0 20px; /* Padding horizontal */
+    grid-column: span 2; /* Se expande a dos columnas en la cuadrícula */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+      
 }
 
 
