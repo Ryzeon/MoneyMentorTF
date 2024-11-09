@@ -438,6 +438,108 @@ header .logo {
     padding: 1.3rem .1rem;
 }
 
+.faq {
+    background-color: white;
+    text-align: center;
+    padding: 3rem;
+}
+.faq h6 {
+    font-size: 0.005rem;
+    color: #0A2B59;
+    margin-bottom: 5rem;
+    margin: 7rem;
+}
+
+.faq h2 {
+    font-size: 3rem;
+    color: #0A2B59;
+    margin-bottom: 1rem;
+    margin: 3rem;
+}
+
+.faq p {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.3rem;
+}
+
+.faq-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    width: 85rem;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: 0.3s;
+}
+.faq-boxx {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    width: 180rem;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.faq-box h3 {
+    font-size: 1.6rem;
+    color: #00C1D4;
+    margin-bottom: 0.8rem;
+}
+
+.faq-box p {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.faq-box:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-boxx h3 {
+    font-size: 1.6rem;
+    color: #00C1D4;
+    margin-bottom: 0.8rem;
+}
+
+.faq-boxx p {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.faq-boxx:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-more {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.faq-more button {
+    background-color: #ff6f47;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-more button:hover {
+    background-color: #e65b37;
+}
+
 #contact {
     scroll-margin-top: 85px;
 }
