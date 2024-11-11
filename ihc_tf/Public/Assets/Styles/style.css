@@ -80,7 +80,11 @@ header {
     height: 90px;
     /* Altura del banner */
     background: #2B3D49;
+<<<<<<< HEAD
     /*color del banner*/
+=======
+    /color del banner/
+>>>>>>> feature
     position: fixed;
     display: flex;
     align-items: center;
@@ -539,7 +543,10 @@ header .logo {
 .faq-more button:hover {
     background-color: #e65b37;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature
 #contact {
     scroll-margin-top: 85px;
 }

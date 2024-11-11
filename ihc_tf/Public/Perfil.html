@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyMentor</title>
+    <!-- Enlaces a estilos y fuentes -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/Styles/perfil.css">
+    <!-- Enlace a Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+    <!-- Mueve el header dentro del body -->
+    
+
+    <div class="container">
+        <!-- Sección lateral izquierda -->
+        <aside>
+            <div class="sidebar">
+                <a href="#" id="inicio_sidebar">
+                    <span class="material-icons-sharp">
+                        home
+                    </span>
+                    <h3>Inicio</h3>
+                </a>
+                <a href="calculadora.html">
+                    <span class="material-icons-sharp">
+                        calculate
+                    </span>
+                    <h3>Calculadora</h3>
+                </a>
+
+                <a href="calendario.html">
+                    <span class="material-icons-sharp">
+                        calendar_month
+                    </span>
+                    <h3>Calendario</h3>
+                </a>
+                <a href="analisis.html">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analisis</h3>
+                </a>
+                <a href="Gestion.html">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Gestion</h3>
+                    <span class="message-count"></span>
+                </a>
+                <a href="Metas.html">
+                    <span class="material-icons-sharp">
+                        task
+                    </span>
+                    <h3>Metas</h3>
+                </a>
+                <a href="Consejos.html">
+                    <span class="material-icons-sharp">
+                        quiz
+                    </span>
+                    <h3>Consejos</h3>
+                </a>
+                <a href="Foro.html">
+                    <span class="material-icons-sharp">
+                        rate_review
+                    </span>
+                    <h3>Foro</h3>
+                </a>
+                <a href="Perfil.html">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Perfil</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main>
+            <div class="containerProfile">
+                <!-- Sección de perfil a la izquierda -->
+                <div class="profile-details">
+                    <img src="profile-picture.jpg" alt="Profile Picture" class="profile-image">
+                    <h2>Andreow Gomez</h2>
+                    <p><i class="fas fa-calendar-alt"></i> User since 2021</p>
+                    <p><i class="fas fa-envelope"></i> AndreowJS@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +51 940 163 699</p>
+                    <h3>Sobre mí</h3>
+                    <p class="about-me">Soy un estudiante universitario que busca organizar sus finanzas</p>
+                </div>
+
+                <!-- Sección de edición a la derecha -->
+                <div class="edit-details">
+                    <h2>Editar datos</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" placeholder="Editar correo electrónico">
+                                <button type="button"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Número telefónico</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" placeholder="Editar número telefónico">
+                                <button type="button"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Dirección</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" id="address" placeholder="Editar dirección">
+                                <button type="button"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" placeholder="Editar contraseña">
+                                <button type="button"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="jss/menu.js"></script> 
+</body>
+</html>
