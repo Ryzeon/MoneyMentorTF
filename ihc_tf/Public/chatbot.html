@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/Styles/chatbot.css">
+    <title>MoneyMentor</title>
+     
+    <script type="module">
+        
+        import { CreateWebWorkerMLCEngine } from "https://esm.run/@mlc-ai/web-llm"
+
+        const $ = el => document.querySelector(el)
+
+        // pongo delante de la variable un símbolo de $
+        // para indicar que es un elemento del DOM
+        const $form = $('form')
+        const $input = $('input')
+        const $template = $('#message-template')
+        const $messages = $('ul')
+        const $container = $('main')
+        const $button = $('button')
+        const $info = $('small')
+        const $loading = $('.loading')
+
+        let messages = []
+        let end = false
+
+        const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
+
+        const engine = await CreateWebWorkerMLCEngine(
+            new Worker('./Assets/Scripts/worker.js', { type: 'module' }),
+            SELECTED_MODEL,
+            {
+                initProgressCallback: (info) => {
+                    $info.textContent = info.text
+                    if (info.progress === 1 && !end) {
+                        end = true
+                        $loading?.parentNode?.removeChild($loading)
+                        $button.removeAttribute('disabled')
+                        addMessage("¡Hola! Soy un tu asistente virtual WealthyAI, consúltame cualquier duda que tengas.", 'bot')
+                        $input.focus()
+                    }
+                }
+            }
+        )
+
+        $form.addEventListener('submit', async (event) => {
+            event.preventDefault()
+            const messageText = $input.value.trim()
+
+            if (messageText !== '') {
+                // añadimos el mensaje en el DOM
+                $input.value = ''
+            }
+
+            addMessage(messageText, 'user')
+            $button.setAttribute('disabled', '')
+
+            const userMessage = {
+                role: 'user',
+                content: messageText
+            }
+
+            messages.push(userMessage)
+
+            const chunks = await engine.chat.completions.create({
+                messages,
+                stream: true
+            })
+
+            let reply = ""
+
+            const $botMessage = addMessage("", 'bot')
+
+            for await (const chunk of chunks) {
+                const choice = chunk.choices[0]
+                const content = choice?.delta?.content ?? ""
+                reply += content
+                $botMessage.textContent = reply
+            }
+
+            $button.removeAttribute('disabled')
+            messages.push({
+                role: 'assistant',
+                content: reply
+            })
+            $container.scrollTop = $container.scrollHeight
+        })
+
+        function addMessage(text, sender) {
+            // clonar el template
+            const clonedTemplate = $template.content.cloneNode(true)
+            const $newMessage = clonedTemplate.querySelector('.message')
+
+            const $who = $newMessage.querySelector('span')
+            const $text = $newMessage.querySelector('p')
+
+            $text.textContent = text
+            $who.textContent = sender === 'bot' ? 'W_AI' : 'Tú'
+            $newMessage.classList.add(sender)
+
+            $messages.appendChild($newMessage)
+
+            $container.scrollTop = $container.scrollHeight
+
+            return $text
+        }
+    </script>
+</head>
+<header>
+    <div class="toggle">
+        <div class="logo">
+            <img src="Assets/Img/logocortado.png">
+        </div>
+    </div>
+
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">
+                    menu
+                </span>
+            </button>
+            <div class="dark-mode">
+                <span class="material-icons-sharp active">
+                    light_mode
+                </span>
+                <span class="material-icons-sharp">
+                    dark_mode
+                </span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p>Hola, <b>Dafne</b></p>
+                    <small class="text-muted">perfil</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="Assets/Img/daf.jpg">
+                </div>
+            </div>
+
+        </div>
+        <!-- final  Nav -->
+</header>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+
+
+            <div class="sidebar">
+                <a href="#" id=inicio_sidebar>
+                    <span class="material-icons-sharp">
+                        home
+                    </span>
+                    <h3>Inicio</h3>
+                </a>
+                <a href="calculadora.html">
+                    <span class="material-icons-sharp">
+                        calculate
+                    </span>
+                    <h3>Calculadora</h3>
+                </a>
+
+                <a href="calendario.html">
+                    <span class="material-icons-sharp">
+                        calendar_month
+                    </span>
+                    <h3>Calendario</h3>
+                </a>
+                <a href="analisis.html">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analisis</h3>
+                </a>
+                <a href="Gestion.html">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Gestion</h3>
+                    <span class="message-count"></span>
+                </a>
+                <a href="Metas.html">
+                    <span class="material-icons-sharp">
+                        task
+                    </span>
+                    <h3>Metas</h3>
+                </a>
+                <a href="Consejos.html">
+                    <span class="material-icons-sharp">
+                        quiz
+                    </span>
+                    <h3>Consejos</h3>
+                </a>
+                <a href="Foro.html">
+                    <span class="material-icons-sharp">
+                        rate_review
+                    </span>
+                    <h3>Foro</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>add</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <section class="assistant">
+                <h2>Asistente Virtual - WealthyAI</h2>
+                <p>Conoce a WealthyAI, tu asistente virtual siempre listo para ayudarte</p>
+                <div class="chatbox">
+                    <div class="chat-header">
+                        <img src="Assets/Img/robot2.png" alt="WealthyAI" class="avatar">
+                        <span class="username">Hola, Andreow!</span>
+                    </div>
+                    <div class="chat-principal">
+                        <ul>
+                            <li class="loading">
+                                <i></i>
+                                <h4>Cargando...</h4>
+                                <h5>Esto puede tardar un poco. Paciencia.</h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="chat-input">
+                        <input type="text" placeholder="Consulta algo">
+                        <button>Enviar</button>
+                    </form>
+                    <template id="message-template">
+                        <li class="message">
+                            <span></span>
+                            <p></p>
+                        </li>
+                    </template>
+                </div>
+            </section>
+        </main>
+
+
+    </div>
+
+    <script src="jss/chatbot.js"></script>
+</body>
+
+</html>
