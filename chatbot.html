@@ -31,7 +31,7 @@
         const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
 
         const engine = await CreateWebWorkerMLCEngine(
-            new Worker('./Assets/Scripts/worker.js', { type: 'module' }),
+            new Worker('ihc_tf/Public/Assets/Scripts/worker.js', { type: 'module' }),
             SELECTED_MODEL,
             {
                 initProgressCallback: (info) => {
@@ -113,7 +113,7 @@
 <header>
     <div class="toggle">
         <div class="logo">
-            <img src="Assets/Img/logocortado.png">
+            <img src="ihc_tf/Public/Assets/Img/logocortado.png">
         </div>
     </div>
 
@@ -141,7 +141,7 @@
                     <small class="text-muted">perfil</small>
                 </div>
                 <div class="profile-photo">
-                    <img src="Assets/Img/daf.jpg">
+                    <img src="ihc_tf/Public/Assets/Img/daf.jpg">
                 </div>
             </div>
 
@@ -230,7 +230,7 @@
                 <p>Conoce a WealthyAI, tu asistente virtual siempre listo para ayudarte</p>
                 <div class="chatbox">
                     <div class="chat-header">
-                        <img src="Assets/Img/robot2.png" alt="WealthyAI" class="avatar">
+                        <img src="ihc_tf/Public/Assets/Img/robot2.png" alt="WealthyAI" class="avatar">
                         <span class="username">Hola, Andreow!</span>
                     </div>
                     <div class="chat-principal">
