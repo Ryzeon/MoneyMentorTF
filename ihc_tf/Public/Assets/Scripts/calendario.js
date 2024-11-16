@@ -247,6 +247,8 @@ function updateEvents(date) {
             <div class="event-time">
               <span class="event-time">${event.time}</span>
             </div>
+              <i class="check-icon fas fa-check">✔️</i>
+              <i class="error-icon fas fa-check">❌</i>
         </div>`;
       });
     }
@@ -281,7 +283,7 @@ document.addEventListener("click", (e) => {
 
 // Limitar a 50 caracteres en el campo del título del evento
 addEventTitle.addEventListener("input", (e) => {
-  addEventTitle.value = addEventTitle.value.slice(0, 50);
+  addEventTitle.value = addEventTitle.value.slice(0, 20);
 });
 
 // Permitir solo formato de hora en los campos de tiempo de evento
@@ -398,9 +400,9 @@ addEventSubmit.addEventListener("click", () => {
 
 // Función para eliminar evento al hacer clic en un evento
 eventsContainer.addEventListener("click", (e) => {
-  if (e.target.classList.contains("event")) {
-    if (confirm("¿Estás seguro de que deseas borrar este evento?")) {
-      const eventTitle = e.target.querySelector(".event-title").innerHTML;
+  if (e.target.classList.contains("check-icon")) { // Solo si se hace clic en el ícono de check
+    if (confirm("¿Estás seguro de que deseas marcar este evento como completado?")) {
+      const eventTitle = e.target.parentElement.querySelector(".event-title").innerHTML;
       eventsArr.forEach((event) => {
         if (
           event.day === activeDay &&
@@ -424,7 +426,35 @@ eventsContainer.addEventListener("click", (e) => {
       });
       updateEvents(activeDay);
     }
-  }
+  } else {
+    if (e.target.classList.contains("error-icon")) { // Solo si se hace clic en el ícono de check
+      if (confirm("¿Estás seguro de que deseas borrar este evento?")) {
+        const eventTitle = e.target.parentElement.querySelector(".event-title").innerHTML;
+        eventsArr.forEach((event) => {
+          if (
+            event.day === activeDay &&
+            event.month === month + 1 &&
+            event.year === year
+          ) {
+            event.events = event.events.filter(
+              (item) => item.title !== eventTitle
+            );
+  
+            // Si no hay eventos restantes en ese día, quitar ese día de eventsArr
+            if (event.events.length === 0) {
+              eventsArr.splice(eventsArr.indexOf(event), 1);
+              // Quitar la clase 'event' del día
+              const activeDayEl = document.querySelector(".day.active");
+              if (activeDayEl && activeDayEl.classList.contains("event")) {
+                activeDayEl.classList.remove("event");
+              }
+            }
+          }
+        });
+        updateEvents(activeDay);
+      }
+    } 
+  } 
 });
 
 // Función para guardar eventos en localStorage
