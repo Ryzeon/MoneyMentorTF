@@ -28,59 +28,67 @@ document.getElementById("calcularButton").addEventListener("click", function () 
     const capitalTotal = monto; // Capital total
     const totalPagar = monto + interesTotal; // Monto total a pagar
 
-    // CONVERTIDOR DE MONEDAS (se ejecuta solo cuando se presiona "Calcular")
+    // Actualizar los resultados en los campos correspondientes
+    document.getElementById("capitalCuota").value = capitalPorCuota.toFixed(2);
+    document.getElementById("interesCuota").value = interesPorCuota.toFixed(2);
+    document.getElementById("cuotaindividual").value = montoPorCuota.toFixed(2);
 
-    const curr1 = document.getElementById('tipoMoneda');
-    const curr2 = document.getElementById('tipoMonedaDatosCalculados');
+    document.getElementById("capitalTotal").value = capitalTotal.toFixed(2);
+    document.getElementById("interestotal").value = interesTotal.toFixed(2);
+    document.getElementById("totalpagar").value = totalPagar.toFixed(2);
 
-    const id_capitalCuota = document.getElementById("capitalCuota");
-    const id_interesCuota = document.getElementById("interesCuota");
-    const id_montoPorCuota = document.getElementById("cuotaindividual");
-
-    const id_capitalTotal = document.getElementById('capitalTotal');  
-    const id_interesTotal = document.getElementById("interestotal");
-    const id_totalPagar = document.getElementById("totalpagar");
-
-    function converter() {
-        const c1 = curr1.value; // Moneda base
-        const c2 = curr2.value; // Moneda objetivo 
-
-        fetch(`https://v6.exchangerate-api.com/v6/53fc54f1da350fcd30a8868c/latest/${c1}`)
-          .then(res => res.json())
-          .then(data => {
-            const rate = data.conversion_rates[c2]; // Obtener la tasa de cambio 
-        
-            // Convertir valores
-            id_capitalCuota.value = (parseFloat(capitalPorCuota) * rate).toFixed(2);
-            id_interesCuota.value = (parseFloat(interesPorCuota) * rate).toFixed(2);
-            id_montoPorCuota.value = (parseFloat(montoPorCuota) * rate).toFixed(2);
-
-            id_capitalTotal.value = (parseFloat(capitalTotal) * rate).toFixed(2);
-            id_interesTotal.value = (parseFloat(interesTotal) * rate).toFixed(2);
-            id_totalPagar.value = (parseFloat(totalPagar) * rate).toFixed(2);
-          })
-          .catch(err => {
-            console.error(err);
-            alert("Error al obtener las tasas de cambio. Verifica tu conexión o intenta más tarde.");
-          });
-    }
-
-    // Ejecutar la conversión después de presionar el botón calcular
-    converter();
+    // Convertir los valores a la moneda seleccionada
+    convertCurrency();
 });
 
-// Limpiar los valores
+// Función para convertir los valores a otra moneda
+function convertCurrency() {
+    const curr1 = document.getElementById("tipoMoneda").value; // Moneda base
+    const curr2 = document.getElementById("tipoMonedaDatosCalculados").value; // Moneda objetivo
+
+    const conversionFields = [
+        { id: "capitalCuota", value: parseFloat(document.getElementById("capitalCuota").value) },
+        { id: "interesCuota", value: parseFloat(document.getElementById("interesCuota").value) },
+        { id: "cuotaindividual", value: parseFloat(document.getElementById("cuotaindividual").value) },
+        { id: "capitalTotal", value: parseFloat(document.getElementById("capitalTotal").value) },
+        { id: "interestotal", value: parseFloat(document.getElementById("interestotal").value) },
+        { id: "totalpagar", value: parseFloat(document.getElementById("totalpagar").value) }
+    ];
+
+    // Llamar a la API de tipo de cambio
+    fetch(`https://v6.exchangerate-api.com/v6/53fc54f1da350fcd30a8868c/latest/${curr1}`)
+        .then(res => res.json())
+        .then(data => {
+            const rate = data.conversion_rates[curr2]; // Obtener la tasa de conversión
+            if (!rate) {
+                alert("Error al obtener la tasa de cambio.");
+                return;
+            }
+
+            // Convertir los valores y actualizar los campos
+            conversionFields.forEach(field => {
+                const convertedValue = field.value * rate;
+                document.getElementById(field.id).value = convertedValue.toFixed(2);
+            });
+        })
+        .catch(err => {
+            console.error(err);
+            alert("Error al obtener las tasas de cambio. Verifica tu conexión o intenta más tarde.");
+        });
+}
+
+// Evento para limpiar los valores
 document.getElementById("limpiarButton").addEventListener("click", function () {
-    // Restablecer los valores de los campos de entrada a su estado vacío o predeterminado
-    document.getElementById("monto").value = '';
-    document.getElementById("interes").value = '';
-    document.getElementById("plazo").value = '';
+    // Restablecer los valores de los campos de entrada y salida a su estado inicial
+    document.getElementById("monto").value = "";
+    document.getElementById("interes").value = "";
+    document.getElementById("plazo").value = "";
 
-    document.getElementById("capitalCuota").value = '';
-    document.getElementById("interesCuota").value = '';
-    document.getElementById("cuotaindividual").value = '';
+    document.getElementById("capitalCuota").value = "";
+    document.getElementById("interesCuota").value = "";
+    document.getElementById("cuotaindividual").value = "";
 
-    document.getElementById("capitalTotal").value = '';
-    document.getElementById("interestotal").value = '';
-    document.getElementById("totalpagar").value = '';
+    document.getElementById("capitalTotal").value = "";
+    document.getElementById("interestotal").value = "";
+    document.getElementById("totalpagar").value = "";
 });
