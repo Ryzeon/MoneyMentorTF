@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" /> <!-- Define el conjunto de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura la vista para dispositivos móviles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
-    ></script> <!-- Carga Font Awesome para iconos -->
-    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/acceso.css"> <!-- Vincula la hoja de estilos CSS -->
-    <title>Login</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    ></script>
+    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/acceso.css">
+    <title>Login</title>
   </head>
 
   <body>
-    <div class="container"> <!-- Contenedor principal para la estructura de la página -->
-      <div class="forms-container"> <!-- Contenedor para los formularios de inicio de sesión y registro -->
-        <div class="signin-signup"> <!-- Contenedor para las dos secciones de formularios -->
-          <form action="#" class="sign-in-form"> <!-- Formulario de inicio de sesión -->
-            <h2 class="title">Iniciar sesión</h2> <!-- Título del formulario de inicio de sesión -->
-            <div class="input-field"> <!-- Campo de entrada para el nombre de usuario -->
-              <i class="fas fa-user"></i> <!-- Icono de usuario -->
-              <input type="text" placeholder="Usuario" /> <!-- Campo de entrada para el nombre de usuario -->
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form id="sign-in-form" class="sign-in-form">
+            <h2 class="title">Iniciar sesión</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="login-username" placeholder="Usuario" required />
             </div>
-            <div class="input-field"> <!-- Campo de entrada para la contraseña -->
-              <i class="fas fa-lock"></i> <!-- Icono de candado -->
-              <input type="password" placeholder="Contraseña" /> <!-- Campo de entrada para la contraseña -->
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="login-password" placeholder="Contraseña" required />
             </div>
-            <input type="button" value="Inicia" class="btn solid" id="login-btn" onclick="window.location.href='menu.html';" disabled /> <!-- Botón de inicio de sesión deshabilitado inicialmente -->
-
-            <p class="social-text">Iniciar sesión con</p> <!-- Texto para las opciones de inicio de sesión social -->
-            <div class="social-media"> <!-- Contenedor para iconos de redes sociales -->
-              <a href="#" class="social-icon"> <!-- Icono de Facebook -->
+            <button type="submit" class="btn solid">Inicia</button>
+         
+            
+            <p class="social-text">Iniciar sesión con</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-icon"> <!-- Icono de Twitter -->
+              <a href="#" class="social-icon">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="social-icon"> <!-- Icono de Google -->
+              <a href="#" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
-              <a href="#" class="social-icon"> <!-- Icono de LinkedIn -->
+              <a href="#" class="social-icon">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
           </form>
-
-          <form action="#" class="sign-up-form"> <!-- Formulario de registro -->
-            <h2 class="title">Registrate</h2> <!-- Título del formulario de registro -->
-            <div class="input-field"> <!-- Campo de entrada para el nombre de usuario -->
-              <i class="fas fa-user"></i> <!-- Icono de usuario -->
-              <input type="text" placeholder="Usuario" /> <!-- Campo de entrada para el nombre de usuario -->
+          <form id="sign-up-form" class="sign-up-form">
+            <h2 class="title">Registrate</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="register-username" placeholder="Usuario" required />
             </div>
-            <div class="input-field"> <!-- Campo de entrada para el correo electrónico -->
-              <i class="fas fa-envelope"></i> <!-- Icono de correo electrónico -->
-              <input type="email" placeholder="Correo" /> <!-- Campo de entrada para el correo electrónico -->
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="register-email" placeholder="Correo" required />
             </div>
-            <div class="input-field"> <!-- Campo de entrada para la contraseña -->
-              <i class="fas fa-lock"></i> <!-- Icono de candado -->
-              <input type="password" placeholder="Contraseña" /> <!-- Campo de entrada para la contraseña -->
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="register-password" placeholder="Contraseña" required />
             </div>
-            <input type="submit" class="btn" value="Registrate" /> <!-- Botón de registro -->
-            <p class="social-text">Registrate con</p> <!-- Texto para las opciones de registro social -->
-            <div class="social-media"> <!-- Contenedor para iconos de redes sociales -->
-              <a href="#" class="social-icon"> <!-- Icono de Facebook -->
+            <button type="submit" class="btn">Registrarse</button>
+            <p class="social-text">Registrate con</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-icon"> <!-- Icono de Twitter -->
+              <a href="#" class="social-icon">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="social-icon"> <!-- Icono de Google -->
+              <a href="#" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
-              <a href="#" class="social-icon"> <!-- Icono de LinkedIn -->
+              <a href="#" class="social-icon">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -106,5 +106,5 @@
     </div>
 
     <script src="ihc_tf/Public/Assets/Scripts/acceso.js"></script> 
-  </body>
+    </body>
 </html>
