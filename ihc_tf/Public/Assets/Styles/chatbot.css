@@ -1,212 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
-    /* Colores principales */
-    --color-primary: #6C9BCF; /* Color primario */
-    --color-danger: #FF0060; /* Color para errores */
-    --color-success: #1B9C85; /* Color para éxito */
-    --color-warning: #F7D060; /* Color para advertencias */
-    --color-white: #fff; /* Color blanco */
-    --color-info-dark: #7d8da1; /* Color para información oscura */
-    --color-dark: #363949; /* Color oscuro */
-    --color-light: rgba(132, 139, 200, 0.18); /* Color claro con opacidad */
-    --color-dark-variant: #677483; /* Variante de color oscuro */
-    --color-background: #f6f6f9; /* Color de fondo */
-    /* Radii y padding para las tarjetas */
-    --card-border-radius: 2rem; /* Radio de borde de las tarjetas */
-    --border-radius-1: 0.4rem; /* Radio de borde 1 */
-    --border-radius-2: 1.2rem; /* Radio de borde 2 */
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
 
-    /* Padding para las tarjetas */
-    --card-padding: 1.8rem; /* Padding para tarjetas */
-    --padding-1: 1.2rem; /* Padding 1 */
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
 
-    /* Sombra de cajas */
-    --box-shadow: 0 2rem 3rem var(--color-light); /* Sombra para cajas */
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
 
+    --box-shadow: 0 2rem 3rem var(--color-light);
 }
-
-
-
-/* Estilos para la sección derecha del encabezado */
+ 
 header .right-section{
-     align-items: flex-start; /* Alineación de los elementos al inicio */
-    align-self: flex-start; /* Alineación del elemento al inicio */
-    gap: 15px; /* Espacio entre elementos */
-    display: flex; /* Display flex para organizar elementos */
-    padding: 0 1rem; /* Padding horizontal */
+    align-items: flex-start;
+    align-self: flex-start;
+    gap: 15px;
+    display: flex;
+    padding: 0 1rem;
+
 }
 
 .logo{
-    z-index: 2; /* Asegura que la logo esté encima */
+    z-index: 2;
 }
 
 
-
-/* Estilos generales para el encabezado */
 header {
-    width: 100%; /* Ancho completo */
-    height: 70px; /* Altura del encabezado */
-    background: #2B3D49; /* Color de fondo del encabezado */
-    position: absolute; /* Posicionamiento absoluto */
-    display: flex; /* Flexbox para organizar elementos */
-    align-items: center; /* Alineación centrada verticalmente */
-    z-index: 1; /* Z-index para apilar elementos */
-    transition: .2s; /* Transición suave para cambios */
-    justify-content: space-between; /* Espacio entre elementos */
-}
-
-/* Estilo para el título en el encabezado */
-header h2 {
-    margin-left: -33rem; /* Margen a la izquierda */
-    color: white; /* Color del texto */
-    font-size: 2rem; /* Tamaño de fuente */
-}
-
-/* Estilos para el contenedor del asistente virtual */
-
-
-.chatbot .status{
-    display: flex;
-    align-items: flex-start; /* Alinea los elementos al inicio */
-    gap: 10px;
-    
-}
-
-/* Estilos para el contenedor del asistente virtual */
-.chatbot {
-    background-color: #E8E8E8; /* Color de fondo del chatbot */
-    border-radius: 15px; /* Bordes redondeados */
-    display: flex; /* Flexbox para organizar elementos */
-    gap: 20px; /* Espacio entre elementos */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
-    width: 100%; /* Ancho completo */
-    max-width: 600px; /* Ancho máximo */
-    padding: 0 20px; /* Padding horizontal */
-    grid-column: span 2; /* Se expande a dos columnas en la cuadrícula */
-    z-index: 100; /* Asegura que esté por encima de otros elementos */
-      
-}
-
-
-
-.chatbot .firstcolumn{
-    flex-direction: column;
-}
-
-
-.chatbot .info {
-    flex: 1;
-    
-}
-
-.chatbot .chatTitle h1 {
-    font-size: 1.5rem;
-    color: #0097a7;
-    padding-top: 2rem;
-    width: 14rem;
-    padding-bottom: 1rem;
-}
-.chatbot .info h3{
-    padding-top: 3.5rem;
-    padding-bottom: 1rem;
-    font-size: 1rem;
-    color: #555;
-    margin: 0px 0;
-    width: 18rem;
-    
-}
-
-.chatbot .robot1{
-    width: 170px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 0px;
-}
-
-
-
-/* Estilos para la sección de chat */
-/* .chat-content {
-
-    margin-left: auto;
+    width: 100%;
+    height: 70px; 
+    background: #2B3D49; 
+    position: absolute;
     display: flex;
     align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-} */
-
-.chat-content {
-    display: flex;
-    align-items: center; /* Cambia `right` a `center` para una alineación válida */
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 19rem;
-    gap: 1.5rem;
+    z-index: 1;
+    transition: .2s;
+    justify-content: space-between;
     
 }
 
-.chat-content img {
-    padding-left: 1rem;;
-    width: 89px;
-    height: 77px;
-    border-radius: 0%;
-    max-width: 100%;
-    max-height: 10%;
+header h2{
+
+
+    margin-left: -33rem;
+    color: white;
+    font-size: 2rem;
 }
 
-.chat-content .chat-message {
-    display: flex;
-    flex-direction: column;
-    width: 15rem;
-    height: 6rem;
-}
-
-.chat-content .chat-message strong {
-    color: #ff6f00;
-    font-size: 1rem;
-}
-
-.chat-content .chat-message p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-.thirdcolumn {
-    display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
-    height: 150%; /* Asegúrate de que la columna ocupe toda la altura del contenedor */
-    padding: 10px;
-}
-
-.chatbutton {
-    margin-top: auto; /* Empuja el chatbutton hacia la parte inferior */
-    align-items: center; /* Opcional: centra el contenido dentro del botón si hay más de un elemento */
-    gap: 10px; /* Espacio entre la imagen y el botón */
-}
-
-.chatbutton img {
-    width: 50px; /* Ajusta el tamaño de la imagen si es necesario */
-    height: auto;
-}
-
-.chatbutton h3 {
-    color: #179BAE;
-    background: none;
-    border: none;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-
-
-
-
+  
 .dark-mode-variables{
     --color-background: #181a1e;
     --color-white: #202528;
@@ -239,10 +90,7 @@ header h2 {
 .sidebar a:hover .material-icons-sharp {
     color: #FF8343; /* icono  */
 }
-
-
-
-
+ 
 *{
     margin: 0;
     padding: 0;
@@ -327,8 +175,6 @@ b{
     color: var(--color-warning);
 }
 
-
-
 .container{
     display: grid;
     width: 96%;
@@ -348,16 +194,12 @@ aside .toggle{
     margin-top: 1.4rem;
 }
 
-
-
 .logo img{
     padding-left: 2rem;
     padding-top: 0rem;
     width: 5rem;
     height:3rem;
 }
-
-
 
 aside .sidebar{
     display: flex;
@@ -436,137 +278,8 @@ aside .sidebar .message-count{
 }
 
 main{
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
-
-
-main .welcome{
-   
-    margin-left: 7rem;
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem 5rem;
-    
-    
-    
-}
-
-main .welcome > div{
-    
-    z-index: 1;
-    
-    border-radius: var(--card-border-radius);
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-}
-
-main .welcome .sales{
-    padding: var(--card-padding);
-    background-color: var(--color-white);
-}
-main .welcome .gestion{
-    padding: var(--card-padding);
-    background-color: var(--color-white);
-}
-main .welcome .views{
-    padding: var(--card-padding);
-    background-color: var(--color-white);
-}
-main .welcome .searches{
-    padding: var(--card-padding);
-    background-color: var(--color-white);
-}
-main .welcome .metas{
-    padding: var(--card-padding);
-    background-color: var(--color-white);
-}
-main .welcome .consejos{
-    padding: var(--card-padding);
-    background-color: var(--color-white);
-}
-main .welcome .Foro{
-    padding: var(--card-padding);
-    background-color: var(--color-white);
-}
-
-
-
-
-main .welcome > div:hover{
-    box-shadow: none;
-}
-
-main .welcome > div .status{
-    
-    width: 15rem;
-    height: 10rem;
-    align-items: center;
-    justify-content: space-between;
-
-    
-}
-
-
-
-main .analywelcome h3{
-    margin-left: 0.6rem;
-    font-size: 1rem;
-}
-
-main .welcome .progresss{
-    position: relative;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-}
-
-main .welcome svg{
-    width: 7rem;
-    height: 7rem;
-}
-
-main .welcome svg circle{
-    fill: none;
-    stroke-width: 10;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-}
-
-main .welcome .sales svg circle {
-    stroke: #003976; /* Cambia el color del borde del círculo */
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .welcome .visits svg circle{
-    stroke: #3BAB12; 
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-    
-}
-
-main .welcome .searches svg circle{
-    stroke: #FF3131;
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .welcome .progresss .percentage{
-    position: absolute;
-    top: -3px;
-    left: -1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-
 
 .right-section{
     margin-top: 1.4rem;
@@ -676,7 +389,7 @@ main .welcome .progresss .percentage{
         margin-top: 1.8rem;
     }
 
-    main .welcome{
+    main .chat{
         grid-template-columns: 1fr;
         gap: 0;
     }
@@ -823,4 +536,238 @@ main .welcome .progresss .percentage{
         font-size: 2rem;
     }
 
+}
+
+main {
+    margin-left: 10%;
+    padding: 5% 10px;
+    width: calc(100%);
+}
+ 
+.assistant {
+    background-color: #E8E8E8;
+    padding: 5%;
+    border-radius: 10px;
+    
+}
+
+.assistant h2 {
+    color: #3ba3e2;
+}
+
+.chatbox {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+}
+
+.chat-header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.chat-header .username {
+    font-weight: bold;
+    margin-left: 10px;
+    color: #ff5e5e;
+}
+
+.chat-content {
+    margin-top: 10px;
+    padding: 10px;
+    margin-right: 100px;
+}
+
+.chat-content .message {
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 80%; 
+    margin-bottom: 20%;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+    border-top: 1px solid #cccccc;
+    padding-top: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f0f0f0;
+}
+
+.chat-input button {
+    background-color: #3ba3e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CHATBOT INTERNO DISEÑO */
+
+.chat-principal {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+    padding: 4px 8px;
+
+    span {
+        width: 36px;
+        height: 36px;
+        background: #eee;
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999999px;
+    }
+
+    p {
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin-top: 4px;
+    }
+
+    &.user {
+        align-self: flex-end;
+        align-items: flex-end;
+
+        span,
+        p {
+            background: rgb(219, 236, 255);
+        }
+    }
+
+    &.bot {
+        align-self: flex-start;
+
+        span,
+        p {
+            background: rgb(198, 255, 220);
+        }
+    }
+}
+
+form {
+    display: flex;
+
+    input {
+        border-radius: 999999px;
+        flex-grow: 1;
+        border: 0;
+        padding: 8px;
+        margin-right: 8px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        background: #09f;
+        border: 0;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 8px;
+        transition: background .3s ease;
+
+        &[disabled] {
+            background: #ccc;
+            opacity: .6;
+            pointer-events: none;
+        }
+
+        &:hover {
+            background: rgb(0, 104, 173);
+        }
+    }
+}
+
+small {
+    font-size: 10px;
+    color: #555;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+}
+
+.loading {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+
+    i {
+        pointer-events: none;
+        width: 2.5em;
+        height: 2.5em;
+        border: 0.4em solid transparent;
+        border-color: #eee;
+        border-top-color: #3E67EC;
+        border-radius: 50%;
+        animation: loadingspin 1s linear infinite;
+    }
+
+    h4 {
+        color: #444;
+        margin-bottom: 8px;
+    }
+
+    h5 {
+        font-weight: 400;
+        margin: 0;
+        font-size: 10px;
+        opacity: .4;
+    }
+}
+
+@keyframes loadingspin {
+    100% {
+        transform: rotate(360deg)
+    }
 }

@@ -31,12 +31,12 @@ body {
 .logo img {
     width: auto;
     max-width: 80px;
-    height: auto; 
+    height: auto;
 }
 
 @media (max-width: 768px) {
     .logo img {
-        max-width: 60px; 
+        max-width: 60px;
     }
 }
 
@@ -58,10 +58,13 @@ body {
     font-weight: 400;
     color: #fff;
 }
+
 header .logo {
 
-    width: 5px; /* Anchura de la imagen del logo */
-    height: 5px; /* Altura ajustada automáticamente para mantener la proporción */
+    width: 5px;
+    /* Anchura de la imagen del logo */
+    height: 5px;
+    /* Altura ajustada automáticamente para mantener la proporción */
 }
 
 header .fa-bars {
@@ -74,8 +77,14 @@ header .fa-bars {
 
 header {
     width: 100%;
-    height: 90px; /* Altura del banner */
-    background: #0A2B59; /*color del banner*/ 
+    height: 90px;
+    /* Altura del banner */
+    background: #2B3D49;
+<<<<<<< HEAD
+    /*color del banner*/
+=======
+    /color del banner/
+>>>>>>> feature
     position: fixed;
     display: flex;
     align-items: center;
@@ -84,6 +93,7 @@ header {
     z-index: 1000;
     transition: .2s;
 }
+
 header .navbar ul {
     display: flex;
     align-items: center;
@@ -103,23 +113,25 @@ header .navbar ul li a {
 
 header .navbar ul li .active,
 header .navbar ul li a:hover {
-    color: #FF8343;  
+    color: #FF8343;
 }
 
 
 header .logo {
-    font-size: -5rem; /* Tamaño del logo */
+    font-size: -5rem;
+    /* Tamaño del logo */
     text-transform: uppercase;
-    width: 2000px; /* Anchura del logo */
-    height: 150px; /* Altura ajustada automáticamente para mantener la proporción */
+    width: 2000px;
+    /* Anchura del logo */
+    height: 150px;
+    /* Altura ajustada automáticamente para mantener la proporción */
 }
 
-
-
-
+/* Capa semi-transparente encima del fondo */
 .home {
     min-height: 100vh;
-    background: url('../Img/fondo_landing.jpg') no-repeat; 
+    background: linear-gradient(rgba(165, 165, 165, 0.267), rgba(165, 165, 165, 0.267)), 
+                url('../Img/fondo_landing.jpg') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -134,26 +146,28 @@ header .logo {
     justify-content: center;
     flex-flow: column;
     padding-top: 20rem;
+    z-index: 2;
 }
+    
 
 .home .content h1 {
     font-size: 6rem;
     color: #fff;
     padding: 0 1rem;
     text-align: left;
-    padding: 1rem 25rem;  
+    padding: 1rem 25rem;
 }
 
 .home .content p {
     font-size: 2rem;
     color: white;
-    padding: 1rem 25rem;   
+    padding: 1rem 25rem;
 }
 
 
 #ali {
     position: relative;
-    left: 25rem; 
+    left: 25rem;
     height: 5rem;
     width: 20rem;
     border-radius: 1rem;
@@ -170,41 +184,95 @@ header .logo {
 @media (max-width: 768px) {
     .home .content h1 {
         font-size: 5rem;
-        padding: 2rem;  
+        padding: 2rem;
     }
 
     #ali {
-        left: 2rem; 
+        left: 2rem;
     }
+}
+
+.download {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+.top-right-image {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 1400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.content-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #179BAE;
+    /* */
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    min-height: 550px;
+    max-width: 1900px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.content-box h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.content-box p {
+    font-size: 2.3rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.content-box img {
+    width: 400px;
+    margin-bottom: 1.5rem;
 }
 
 
 .home .content button:hover {
     background: none;
-    border: .2rem solid #FBBD5D; 
+    border: .2rem solid #FBBD5D;
 }
 
 #nosotros {
-    scroll-margin-top: 89px; 
+    scroll-margin-top: 89px;
 }
+
 .nosotros {
     text-align: center;
     margin: 100px 0;
 }
 
 .nosotros h2 {
-    font-size: 5rem; 
-    margin-top: -70px; 
-    padding-top: 2rem; 
-    text-align: center; 
-    color:#0A2B59;
+    font-size: 5rem;
+    margin-top: -70px;
+    padding-top: 2rem;
+    text-align: center;
+    color: #0A2B59;
 }
 
 .nosotros .content p {
-    font-size: 1.5rem; 
-    color: #0A2B59; 
-    margin-bottom: 2rem; 
-    margin-top: 10px; 
+    font-size: 1.5rem;
+    color: #0A2B59;
+    margin-bottom: 2rem;
+    margin-top: 10px;
 
 }
 
@@ -213,7 +281,7 @@ header .logo {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    margin-top:5rem;
+    margin-top: 5rem;
 }
 
 .nosotros .box-container .box {
@@ -228,11 +296,12 @@ header .logo {
 }
 
 .nosotros .box-container .box img {
-    max-width: 95%; 
-    max-height: 95%; 
+    max-width: 95%;
+    max-height: 95%;
 }
 
 .nosotros .box-container .box h3 {
+    font-weight: bold;
     font-size: 2rem;
     color: #0A2B59;
     transition: .2s;
@@ -241,7 +310,7 @@ header .logo {
 .nosotros .box-container .box p {
     font-size: 1.3rem;
     padding: .7rem 2rem;
-    color: black;
+    color: #2B3D49;
 }
 
 .nosotros .box-container .box:hover h3 {
@@ -256,18 +325,18 @@ header .logo {
 }
 
 .servicios h2 {
-    font-size: 5rem; 
-    margin-top: -70px; 
-    padding-top: 2rem; 
-    text-align: center; 
-    color:#0A2B59;
+    font-size: 5rem;
+    margin-top: -70px;
+    padding-top: 2rem;
+    text-align: center;
+    color: #0A2B59;
 }
 
 .servicios .content p {
-    font-size: 1.5rem; 
-    color: black; 
-    margin-bottom: 2rem; 
-    margin-top: 10px; 
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 2rem;
+    margin-top: 10px;
 }
 
 .servicios .box-container {
@@ -275,7 +344,7 @@ header .logo {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    margin-top:5rem;
+    margin-top: 5rem;
 }
 
 .servicios .box-container .box {
@@ -290,8 +359,8 @@ header .logo {
 }
 
 .servicios .box-container .box img {
-    max-width: 95%; 
-    max-height: 95%; 
+    max-width: 95%;
+    max-height: 95%;
 }
 
 .servicios .box-container .box h3 {
@@ -310,26 +379,27 @@ header .logo {
     color: #FBBD5D;
 }
 
-#review{
-    scroll-margin-top: 89px; 
+#review {
+    scroll-margin-top: 89px;
 }
+
 .review {
     background: white;
-    text-align: center; 
+    text-align: center;
     padding-top: 3rem;
 }
 
 .review h2 {
-    font-size: 5rem; 
-    color: #0A2B59; 
-    margin-bottom: 2rem; 
+    font-size: 5rem;
+    color: #0A2B59;
+    margin-bottom: 2rem;
     margin-top: -25px;
 }
 
 .review p {
-    font-size: 1.5rem; 
-    color: #000; 
-    margin-bottom: 3rem; 
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 3rem;
 }
 
 .review .box-container {
@@ -340,64 +410,165 @@ header .logo {
 }
 
 .review .box-container .box {
-    width: 34rem;
-    padding-bottom: 1rem;
+    background-color: #F6F6F6;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.1);
+    padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 .3rem 5rem rgba(0, 0, 0, .3);
-    background: #0A2B59; 
-    margin: 4rem 2rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem; 
+    border: 2px #b3b3b3; /* Borde de 2px en color negro */
 }
 
 .review .box-container .box img {
-    height: 8.5rem;
-    width: 8.5rem;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 50%;
-    margin-top: -4rem;
-    border: .6rem solid #56B58B;
-    border-left: .6rem solid #FBBD5D;
-    border-bottom: .6rem solid #FBBD5D;
+    margin-bottom: 1rem;
 }
 
 .review .box-container .box h3 {
     font-size: 2rem;
-    color: #56B58B;
+    color: #00BFB2;
     padding: 0 .5rem;
 }
 
 .review .box-container .box p {
     font-size: 1.4rem;
-    color: #fff;
+    color: #0B2860;
     padding: 1.3rem .1rem;
 }
 
-.review .box-container .box .stars i {
+.faq {
+    background-color: white;
+    text-align: center;
+    padding: 3rem;
+}
+.faq h6 {
+    font-size: 0.005rem;
+    color: #0A2B59;
+    margin-bottom: 5rem;
+    margin: 7rem;
+}
+
+.faq h2 {
+    font-size: 3rem;
+    color: #0A2B59;
+    margin-bottom: 1rem;
+    margin: 3rem;
+}
+
+.faq p {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.3rem;
+}
+
+.faq-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    width: 85rem;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: 0.3s;
+}
+.faq-boxx {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    width: 180rem;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.faq-box h3 {
     font-size: 1.6rem;
-    color: #ffc246;
-    padding: 1.3rem .1rem;
+    color: #00C1D4;
+    margin-bottom: 0.8rem;
 }
 
-#contact{
-    scroll-margin-top: 85px; 
+.faq-box p {
+    font-size: 1.4rem;
+    color: #333;
 }
-.contact  { 
-    background: white; 
-    text-align: center;  
-    padding-top: 3rem; 
+
+.faq-box:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-boxx h3 {
+    font-size: 1.6rem;
+    color: #00C1D4;
+    margin-bottom: 0.8rem;
+}
+
+.faq-boxx p {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.faq-boxx:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-more {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.faq-more button {
+    background-color: #ff6f47;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-more button:hover {
+    background-color: #e65b37;
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> feature
+#contact {
+    scroll-margin-top: 85px;
+}
+
+.contact {
+    background: white;
+    text-align: center;
+    padding-top: 3rem;
 }
 
 .contact h2 {
-    font-size: 5rem; 
-    color: #0A2B59; 
-    margin-bottom: 2rem; 
+    font-size: 5rem;
+    color: #0A2B59;
+    margin-bottom: 2rem;
     margin-top: -70px;
 }
 
 
 .contact p {
-    font-size: 1.5rem; 
-    color: #000; 
-    margin-bottom: -2rem; 
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: -2rem;
 }
 
 .contact .row {
@@ -413,7 +584,8 @@ header .logo {
     padding-right: 6rem;
 }
 
-.contact .row .form-container input, textarea {
+.contact .row .form-container input,
+textarea {
     height: 4rem;
     width: 100%;
     background: #fff;
@@ -425,7 +597,8 @@ header .logo {
     transition: .2s linear;
 }
 
-.contact .row .form-container input:focus, textarea:focus {
+.contact .row .form-container input:focus,
+textarea:focus {
     border: .4rem solid #0A2B59;
 }
 
@@ -452,8 +625,8 @@ header .logo {
     border: .2rem solid #0A2B59;
 }
 
-footer{
-    background-color: #0A2B59 ;
+footer {
+    background-color: #0A2B59;
     font-size: 1.5rem;
     color: #fff;
     padding: 20px;
@@ -499,7 +672,7 @@ footer{
     }
 
     header .nav-toggle {
-        top:5.5rem;
+        top: 5.5rem;
         opacity: 1;
     }
 

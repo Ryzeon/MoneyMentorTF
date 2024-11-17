@@ -1,59 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
+/* Variables globales de colores */
 :root{
-    --color-primary: #6C9BCF;
-    --color-danger: #FF0060;
-    --color-success: #1B9C85;
-    --color-warning: #F7D060;
-    --color-white: #fff;
-    --color-info-dark: #7d8da1;
-    --color-dark: #363949;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
+    --color-primary: #6C9BCF; /* Color primario */
+    --color-danger: #FF0060; /* Color de peligro */
+    --color-success: #1B9C85; /* Color de éxito */
+    --color-warning: #F7D060; /* Color de advertencia */
+    --color-white: #fff; /* Color blanco */
+    --color-info-dark: #7d8da1; /* Color de información (oscuro) */
+    --color-dark: #363949; /* Color oscuro */
+    --color-light: rgba(132, 139, 200, 0.18); /* Color claro con opacidad */
+    --color-dark-variant: #677483; /* Variante del color oscuro */
+    --color-background: #f6f6f9; /* Color de fondo */
 
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 1.2rem;
+    /* Variables de diseño para bordes y radios */
+    --card-border-radius: 2rem; /* Radio de borde de tarjeta */
+    --border-radius-1: 0.4rem; /* Radio de borde pequeño */
+    --border-radius-2: 1.2rem; /* Radio de borde mediano */
 
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
+    /* Variables de padding */
+    --card-padding: 1.8rem; /* Padding de tarjeta */
+    --padding-1: 1.2rem; /* Padding pequeño */
 
+    /* Sombra de caja */
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* Variables para modo oscuro */
 .dark-mode-variables{
-    --color-background: #181a1e;
-    --color-white: #202528;
-    --color-dark: #edeffd;
-    --color-dark-variant: #a3bdcc;
-    --color-light: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light);
+    --color-background: #181a1e; /* Color de fondo en modo oscuro */
+    --color-white: #202528; /* Color blanco en modo oscuro */
+    --color-dark: #edeffd; /* Color oscuro en modo oscuro */
+    --color-dark-variant: #a3bdcc; /* Variante del color oscuro en modo oscuro */
+    --color-light: rgba(0, 0, 0, 0.4); /* Color claro con opacidad en modo oscuro */
+    --box-shadow: 0 2rem 3rem var(--color-light); /* Sombra de caja en modo oscuro */
 }
 
+/* Estilos básicos para todos los elementos */
 *{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    appearance: 0;
-    border: 0;
-    text-decoration: none;
-    box-sizing: border-box;
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    outline: 0; /* Elimina el contorno */
+    appearance: 0; /* Elimina la apariencia predeterminada */
+    border: 0; /* Elimina el borde */
+    text-decoration: none; /* Elimina el subrayado de enlaces */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
 }
 
 html{
     font-size: 14px;
 }
 
+
+/* Estilos para el cuerpo del documento */
 body{
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.88rem;
-    user-select: none;
-    overflow-x: hidden;
-    color: var(--color-dark);
-    background-color: var(--color-background);
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Altura completa de la ventana */
+    font-family: 'Poppins', sans-serif; /* Fuente utilizada */
+    font-size: 0.88rem; /* Tamaño de fuente */
+    user-select: none; /* Desactiva la selección de texto */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    color: var(--color-dark); /* Color del texto */
+    background-color: var(--color-background); /* Color de fondo */
 }
 
 a{
