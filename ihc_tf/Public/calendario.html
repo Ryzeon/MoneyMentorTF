@@ -1,102 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Calendario"
-    />
-    <meta
-      name="keywords"
-      content="calendar, events, reminders, javascript, html, css, open source coding"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="Assets/Styles/calendario.css">    <title>Calendario</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="left">
-        <div class="calendar">
-          <div class="month">
-            <i class="fas fa-angle-left prev"></i>
-            <div class="date">Diciembre 2015</div>
-            <i class="fas fa-angle-right next"></i>
-          </div>
-          <div class="weekdays">
-            <div>Domingo</div>
-            <div>Lunes</div>
-            <div>Marte</div>
-            <div>Miercoles</div>
-            <div>Jueves</div>
-            <div>Viernes</div>
-            <div>Sabado</div>
-          </div>
-          <div class="days"></div>
-          <div class="goto-today">
-            <div class="goto">
-              <input type="text" placeholder="mm/aaaa" class="date-input" />
-              <button class="goto-btn">Ir</button>
-            </div>
-            <button class="today-btn">Hoy</button>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="today-date">
-          <div class="event-day">año</div>
-          <div class="event-date">12th diciembre 2022</div>
-        </div>
-        <div class="events"></div>
-        <div class="add-event-wrapper">
-          <div class="add-event-header">
-            <div class="title">Añadir evento</div>
-            <i class="fas fa-times close"></i>
-          </div>
-          <div class="add-event-body">
-            <div class="add-event-input">
-              <input type="text" placeholder="Nombre" class="event-name" />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Hora de inicio"
-                class="event-time-from"
-              />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Hora de finalización"
-                class="event-time-to"
-              />
-            </div>
-          </div>
-          <div class="add-event-footer">
-            <button class="add-event-btn">Nuevo Evento</button>
-          </div>
-        </div>
-      </div>
-      <button class="add-event">
-        <i class="fas fa-plus"></i>
-      </button>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/calendario.css">
+    <title>Calendario</title>
+</head>
 
-    <div class="credits">
-      <p>
-     
-       
-      </p>
+<body>
+  <header>
+    <div class="toggle">
+        <div class="logo">
+            <img src="ihc_tf/Public/Assets/Img/logocortado.png" alt="Logo">
+        </div>
     </div>
+    <h2>Bienvenido(a)</h2>
 
-    <script src="Assets/Scripts/calendario.js"></script> 
-  </body>
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="dark-mode">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p>Hola, <b>Dafne</b></p>
+                    <small class="text-muted">perfil</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="ihc_tf/Public/Assets/Img/daf.jpg" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div>
+      <div class="container">
+        <aside>
+            <div class="sidebar">
+                <a href="menu.html" id="inicio_sidebar"><span class="material-icons-sharp">home</span><h3>Inicio</h3></a>
+                <a href="calculadora.html"><span class="material-icons-sharp">calculate</span><h3>Calculadora</h3></a>
+                <a href="calendario.html"><span class="material-icons-sharp">calendar_month</span><h3>Calendario</h3></a>
+                <a href="analisis.html"><span class="material-icons-sharp">insights</span><h3>Analisis</h3></a>
+                <a href="Gestion.html"><span class="material-icons-sharp">inventory</span><h3>Gestion</h3></a>
+                <a href="Metas.html"><span class="material-icons-sharp">task</span><h3>Metas</h3></a>
+                <a href="Consejos.html"><span class="material-icons-sharp">quiz</span><h3>Consejos</h3></a>
+                <a href="Foro.html"><span class="material-icons-sharp">rate_review</span><h3>Foro</h3></a>
+                <a href="#"><span class="material-icons-sharp">add</span><h3>Añadir</h3></a>
+                <a href="#"><span class="material-icons-sharp">logout</span><h3>Logout</h3></a>
+            </div>
+        </aside>
+        <div class="left">
+          <div class="calendar">
+            <div class="month">
+              <i class="fas fa-angle-left prev"></i>
+              <div class="date">Diciembre 2015</div>
+              <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+              <div>Domingo</div>
+              <div>Lunes</div>
+              <div>Marte</div>
+              <div>Miercoles</div>
+              <div>Jueves</div>
+              <div>Viernes</div>
+              <div>Sabado</div>
+            </div>
+            <div class="days"></div>
+            <div class="goto-today">
+              <div class="goto">
+                <input type="text" placeholder="mm/aaaa" class="date-input" />
+                <button class="goto-btn">Ir</button>
+              </div>
+              <button class="today-btn">Hoy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="today-date">
+            <div class="event-day">dia</div>
+            <div class="event-date">12th diciembre 2022</div>
+          </div>
+          <div class="events"></div>
+          <div class="add-event-wrapper">
+            <div class="add-event-header">
+              <div class="title">Añadir evento</div>
+              <i class="fas fa-times close"></i>
+            </div>
+            <div class="add-event-body">
+              <div class="add-event-input">
+                <input type="text" placeholder="Nombre" class="event-name" />
+              </div>
+              <div class="add-event-input">
+                <input
+                  type="text"
+                  placeholder="Hora de inicio"
+                  class="event-time-from"
+                />
+              </div>
+              <div class="add-event-input">
+                <input
+                  type="text"
+                  placeholder="Hora de finalización"
+                  class="event-time-to"
+                />
+              </div>
+            </div>
+            <div class="add-event-footer">
+              <button class="add-event-btn">Nuevo Evento</button>
+            </div>
+          </div>
+        </div>
+        <button class="add-event">
+          <i class="fas fa-plus">+</i>
+        </button>
+    </div>
+  </div>
+  <script src="ihc_tf/Public/Assets/Scripts/calendario.js"></script> 
+</body>
 </html>
-
