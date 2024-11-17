@@ -80,11 +80,7 @@ header {
     height: 90px;
     /* Altura del banner */
     background: #2B3D49;
-<<<<<<< HEAD
     /*color del banner*/
-=======
-    /color del banner/
->>>>>>> feature
     position: fixed;
     display: flex;
     align-items: center;
@@ -543,10 +539,6 @@ header .logo {
 .faq-more button:hover {
     background-color: #e65b37;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> feature
 #contact {
     scroll-margin-top: 85px;
 }
@@ -626,13 +618,90 @@ textarea:focus {
 }
 
 footer {
-    background-color: #0A2B59;
-    font-size: 1.5rem;
-    color: #fff;
-    padding: 20px;
-    margin-top: 50px;
+    background-color: #2B3D49; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0;
     text-align: center;
 
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Asegura que los elementos se adapten */
+    gap: 20px; /* Espaciado entre columnas */
+    margin-bottom: 9%;
+    margin-top: 2%;
+}
+
+.footer-logo-description {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+.footer-logo {
+    width: 29%; /* Ajusta el tamaño del logo */
+    
+}
+
+.footer-sections,
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    
+    align-items:center;
+}
+
+.footer-sections h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-sections ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-sections li,
+.footer-social li {
+    margin-bottom: 8px;
+}
+
+.footer-sections a,
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-sections a:hover,
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-bar {
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.footer-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bar a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -690,5 +759,19 @@ footer {
     .contact .row .form-container {
         width: 90%;
         padding: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo-description {
+        text-align: center;
+    }
+
+    .footer-sections,
+    .footer-social {
+        text-align: center;
     }
 }
