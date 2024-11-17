@@ -495,7 +495,7 @@ main .welcome .gestion{
     padding: var(--card-padding);
     background-color: var(--color-white);
 }
-main .welceome .views{
+main .welcome .views{
     padding: var(--card-padding);
     background-color: var(--color-white);
 }
