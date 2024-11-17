@@ -22,7 +22,17 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-
+.profile-photo{
+    width: 150px; /* Ajusta el tamaño según necesites */
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 header .right-section{
