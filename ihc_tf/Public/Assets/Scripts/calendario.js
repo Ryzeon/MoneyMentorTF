@@ -480,3 +480,14 @@ function convertTime(time) {
   time = timeHour + ":" + timeMin + " " + timeFormat;
   return time;
 }
+
+function scrollToActiveDay() {
+  const activeDayEl = document.querySelector(".day.active");
+  if (activeDayEl) {
+    activeDayEl.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+// Llama a esta función después de actualizar el día activo
+updateEvents(activeDay);
+scrollToActiveDay();
