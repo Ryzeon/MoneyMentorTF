@@ -68,7 +68,7 @@
                             <h4>Eleanor Villanueva</h4>
                         </div>
                         <p>¿Cuál es su estrategia de ahorro favorita?</p>
-                        <button>Responder</button>
+                        <button class="responder-btn">Responder</button>
                     </div>
         
                     <!-- Post de Alejandro Almonte -->
@@ -78,7 +78,7 @@
                             <h4>Alejandro Almonte</h4>
                         </div>
                         <p>¿Cuándo es el momento adecuado para empezar a planificar para la jubilación?</p>
-                        <button>Responder</button>
+                        <button class="responder-btn">Responder</button>
                     </div>
         
                     <!-- Post de Carlos Rodriguez -->
@@ -88,7 +88,7 @@
                             <h4>Carlos Rodriguez</h4>
                         </div>
                         <p>Yo prefiero automatizar mis ahorros cada mes para asegurarme de no gastar de más.</p>
-                        <button>Responder</button>
+                        <button class="responder-btn">Responder</button>
                     </div>
         
                     <!-- Post de Sonia Soto -->
@@ -98,7 +98,7 @@
                             <h4>Sonia Soto</h4>
                         </div>
                         <p>Es importante empezar lo antes posible, pero nunca es tarde para empezar a ahorrar e invertir para el futuro.</p>
-                        <button>Responder</button>
+                        <button class="responder-btn">Responder</button>
                     </div>
         
                     <!-- Post de Roberto Saenz -->
@@ -108,7 +108,7 @@
                             <h4>Roberto Saenz</h4>
                         </div>
                         <p>Invierto en acciones de empresas sólidas para hacer crecer mi dinero a largo plazo.</p>
-                        <button>Responder</button>
+                        <button class="responder-btn">Responder</button>
                     </div>
         
                     <!-- Post de Kenji Nakamura -->
@@ -118,7 +118,7 @@
                             <h4>Kenji Nakamura</h4>
                         </div>
                         <p>Empecé a planificar para la jubilación en mis 20 años para aprovechar al máximo el poder del interés compuesto.</p>
-                        <button>Responder</button>
+                        <button class="responder-btn">Responder</button>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,39 @@
         
     </div>
 
-    <script src="ihc_tf/Public/Scripts/foro.js"></script>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <button id="close-popup" class="close-btn" aria-label="Cerrar">&times;</button>
+            <div class="header">
+                <img src="ihc_tf/Public/Assets/Img/user1.png" alt="User" class="user-img">
+                <h2 id="popup-name" class="user-name"></h2>
+            </div>
+            <h3 id="popup-question"></h3>
+            <textarea id="comment-input" placeholder="Escribir un comentario"></textarea>
+            <button id="send-comment" class="send-btn">Enviar</button>
+            <div id="popup-comments" class="comments">
+                <div class="comment">
+                    <img src="ihc_tf/Public/Assets/Img/user2.png" alt="Alejandro" class="comment-img">
+                    <div class="comment-body">
+                        <h4 class="comment-user">Alejandro Almonte</h4>
+                        <p>A mí por lo general me gusta usar aplicaciones de ahorro.</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <img src="ihc_tf/Public/Assets/Img/user4.png" alt="Sonia" class="comment-img">
+                    <div class="comment-body">
+                        <h4 class="comment-user">Sonia Soto</h4>
+                        <p>Registro mis ingresos y gastos en Excel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="ihc_tf/Public/Assets/Scripts/foro.js"></script>
+
 </body>
 
 </html>
