@@ -7,7 +7,7 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/acceso.css">
+    <link rel="stylesheet" href="Assets/Styles/acceso.css">
     <title>Login</title>
   </head>
 
@@ -15,19 +15,27 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
+<<<<<<< Updated upstream:ihc_tf/Public/acceso.html
+          <form action="#" class="sign-in-form">
+=======
+          <!-- Formulario de Inicio de Sesión -->
           <form id="sign-in-form" class="sign-in-form">
+>>>>>>> Stashed changes:acceso.html
             <h2 class="title">Iniciar sesión</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="login-username" placeholder="Usuario" required />
+              <input type="text" placeholder="Usuario" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id="login-password" placeholder="Contraseña" required />
+              <input type="password" placeholder="Contraseña" />
             </div>
-            <button type="submit" class="btn solid">Inicia</button>
-         
+<<<<<<< Updated upstream:ihc_tf/Public/acceso.html
+            <input type="button" value="inicia" class="btn solid" onclick="window.location.href='menu.html';"/>
             
+=======
+            <button type="submit" class="btn solid">Iniciar Sesión</button>
+>>>>>>> Stashed changes:acceso.html
             <p class="social-text">Iniciar sesión con</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -44,21 +52,31 @@
               </a>
             </div>
           </form>
+<<<<<<< Updated upstream:ihc_tf/Public/acceso.html
+          <form action="#" class="sign-up-form">
+=======
+
+          <!-- Formulario de Registro -->
           <form id="sign-up-form" class="sign-up-form">
+>>>>>>> Stashed changes:acceso.html
             <h2 class="title">Registrate</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="register-username" placeholder="Usuario" required />
+              <input type="text" placeholder="Usuario" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="register-email" placeholder="Correo" required />
+              <input type="email" placeholder="Correo" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id="register-password" placeholder="Contraseña" required />
+              <input type="password" placeholder="Contraseña" />
             </div>
-            <button type="submit" class="btn">Registrarse</button>
+<<<<<<< Updated upstream:ihc_tf/Public/acceso.html
+            <input type="submit" class="btn" value="registrat" />
+=======
+            <button type="submit" class="btn solid">Registrarse</button>
+>>>>>>> Stashed changes:acceso.html
             <p class="social-text">Registrate con</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -78,6 +96,7 @@
         </div>
       </div>
 
+      <!-- Paneles para alternar vistas -->
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
@@ -86,9 +105,7 @@
               ¡Te damos la más cálida bienvenida! 
               Únete a nuestra comunidad y regístrate hoy.
             </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Registrate
-            </button>
+            <button class="btn transparent" id="toggle-sign-up">Registrate</button>
           </div>
         </div>
         <div class="panel right-panel">
@@ -97,14 +114,17 @@
             <p>
               ¡Explora más y descubre lo que tenemos para ofrecerte!
             </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Iniciar Sesión
-            </button>
+            <button class="btn transparent" id="toggle-sign-in">Iniciar Sesión</button>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="ihc_tf/Public/Assets/Scripts/acceso.js"></script> 
+<<<<<<< Updated upstream:ihc_tf/Public/acceso.html
+    <script src="Assets/Scripts/acceso.js"></script> 
     </body>
+=======
+    <script src="ihc_tf/Public/Assets/Scripts/acceso.js"></script> 
+  </body>
+>>>>>>> Stashed changes:acceso.html
 </html>
