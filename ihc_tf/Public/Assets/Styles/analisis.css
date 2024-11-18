@@ -26,45 +26,105 @@
 }
 
 /* Variables para modo oscuro */
+
+header {
+    width: 100%; /* Ancho completo */
+    height: 70px; /* Altura del encabezado */
+    background: #2B3D49; /* Color de fondo del encabezado */
+    position: absolute; /* Posicionamiento absoluto */
+    display: flex; /* Flexbox para organizar elementos */
+    align-items: center; /* Alineación centrada verticalmente */
+    z-index: 1; /* Z-index para apilar elementos */
+    transition: .2s; /* Transición suave para cambios */
+    justify-content: space-between; /* Espacio entre elementos */
+    margin-bottom: 20px;
+}
+
+/* Logo */
+header .logo img {
+    width: 5rem; /* Ancho del logo */
+    height: 3rem; /* Alto del logo */
+    object-fit: contain;
+}
+
+/* Título "Bienvenido(a)" */
+header h2 {
+    margin-left: -33rem; /* Margen a la izquierda */
+    color: white; /* Color del texto */
+    font-size: 2rem; /* Tamaño de fuente */
+}
+
+/* Sección de la derecha */
+header .right-section{
+    align-items: flex-start; /* Alineación de los elementos al inicio */
+   align-self: flex-start; /* Alineación del elemento al inicio */
+   gap: 15px; /* Espacio entre elementos */
+   display: flex; /* Display flex para organizar elementos */
+   padding: 0 1rem; /* Padding horizontal */
+}
+
+
 .dark-mode-variables{
-    --color-background: #181a1e; /* Color de fondo en modo oscuro */
-    --color-white: #202528; /* Color blanco en modo oscuro */
-    --color-dark: #edeffd; /* Color oscuro en modo oscuro */
-    --color-dark-variant: #a3bdcc; /* Variante del color oscuro en modo oscuro */
-    --color-light: rgba(0, 0, 0, 0.4); /* Color claro con opacidad en modo oscuro */
-    --box-shadow: 0 2rem 3rem var(--color-light); /* Sombra de caja en modo oscuro */
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+/* Íconos de Material Icons */
+.material-icons-sharp {
+    font-size: 2rem; /* Tamaño de los íconos */
+    color: white; /* Color blanco */
 }
 
-/* Estilos básicos para todos los elementos */
-*{
-    margin: 0; /* Elimina el margen */
-    padding: 0; /* Elimina el padding */
-    outline: 0; /* Elimina el contorno */
-    appearance: 0; /* Elimina la apariencia predeterminada */
-    border: 0; /* Elimina el borde */
-    text-decoration: none; /* Elimina el subrayado de enlaces */
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+/* Íconos activos */
+.material-icons-sharp.active {
+    color: #FFD700; /* Color dorado para el ícono activo */
 }
 
-html{
-    font-size: 14px;
+/* Estilos del perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre la información y la foto */
 }
 
-
-/* Estilos para el cuerpo del documento */
-body{
-    width: 100vw; /* Ancho completo de la ventana */
-    height: 100vh; /* Altura completa de la ventana */
-    font-family: 'Poppins', sans-serif; /* Fuente utilizada */
-    font-size: 0.88rem; /* Tamaño de fuente */
-    user-select: none; /* Desactiva la selección de texto */
-    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
-    color: var(--color-dark); /* Color del texto */
-    background-color: var(--color-background); /* Color de fondo */
+.profile .info {
+    color: #fff; /* Color blanco */
+    text-align: right;
 }
 
+.profile .info p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.profile .info small {
+    font-size: 0.8rem;
+    color: #bbb; /* Color gris claro */
+}
+
+.profile-photo{
+    width: 150px; /* Ajusta el tamaño según necesites */
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo img{
+    padding-left: 2rem;
+    padding-top: 0rem;
+    width: 5rem;
+    height:3rem;
+}
 a{
-    color: var(--color-dark);
+    color: #FBBD5D;
 }
 
 img{
@@ -76,6 +136,7 @@ img{
 h1{
     font-weight: 800;
     font-size: 1.8rem;
+    z-index: 1
 }
 
 h2{
@@ -97,7 +158,7 @@ p{
 }
 
 b{
-    color: var(--color-dark);
+    color: #FBBD5D;
 }
 
 .text-muted{
@@ -109,7 +170,7 @@ b{
 }
 
 .danger{
-    color: var(--color-danger);
+    color: #FBBD5D;
 }
 
 .success{
@@ -119,61 +180,153 @@ b{
 .warning{
     color: var(--color-warning);
 }
-
-.container{
-    display: grid;
-    width: 96%;
-    margin: 0 auto;
-    gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+.dark-mode .material-icons-sharp:last-child {
+    color: #333; /* Cambia el color del ícono dark_mode a un color oscuro */
 }
-
-aside{
-    height: 100vh;
+.profile .info p {
+    color: #bbb; /* Color para "Hola" */
 }
-
-aside .toggle{
+.profile .info p b {
+    color: #FBBD5D; /* Color para "Andreow" */
+}
+.profile .info small {
+    color: #bbb; /* Color para "perfil" */
+}
+.header .material-icons-sharp {
+    color: black; /* Cambia el color del icono a negro */
+}
+.header{
+    margin: 50px;
+}
+.body{
+    margin: 50px;
+}
+.analyse {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* Para que las tarjetas se ajusten si el espacio es reducido */
+    gap: 20px; /* Añade espacio entre las tarjetas */
     justify-content: space-between;
-    margin-top: 1.4rem;
 }
 
-aside .toggle .logo{
-    display: flex;
-    gap: 0.5rem;
+.analyse .status {
+    margin-bottom: 15px; /* Espaciado adicional entre tarjetas */
+}
+.analyse {
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
 }
 
-aside .toggle .logo img{
-    width: 2rem;
-    height: 2rem;
+.new-money {
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
 }
 
-aside .toggle .close{
-    padding-right: 1rem;
-    display: none;
+.total-cash {
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
 }
-
-aside .sidebar{
+.analyse .status, 
+.new-money .money, 
+.total-cash .cash {
+    padding: 10px; /* Espaciado interno dentro de cada tarjeta */
+    margin-bottom: 10px; /* Espacio externo entre las tarjetas */
+    margin: 20px;
+}
+.user-profile {
+    margin-top: 2000px; /* Espaciado para bajarlo un poco del límite superior */
+    position: relative; /* Asegura que siga el flujo normal del documento */
+}
+.user-profile .logo {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-white);
+    align-items: center;
+    text-align: center;
+}
+/* Estilos básicos para todos los elementos */
+*{
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    outline: 0; /* Elimina el contorno */
+    appearance: 0; /* Elimina la apariencia predeterminada */
+    border: 0; /* Elimina el borde */
+    text-decoration: none; /* Elimina el subrayado de enlaces */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+html{
+    font-size: 14px;
+}
+
+.profile-photo{
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para el cuerpo del documento */
+body{
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Altura completa de la ventana */
+    font-family: 'Poppins', sans-serif; /* Fuente utilizada */
+    font-size: 0.88rem; /* Tamaño de fuente */
+    user-select: none; /* Desactiva la selección de texto */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    color: var(--color-dark); /* Color del texto */
+    background-color: var(--color-background); /* Color de fondo */
+}
+
+/* Estilos para los enlaces en sidebar */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #2B3D49;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #2B3D49; 
+    color: #0A2B59; 
+    border-radius: 20px; 
+    transform: translateX(-20px);
+}
+
+.sidebar a:hover .material-icons-sharp {
+    color: #FF8343;
+}
+
+.sidebar {
+    margin-left: 3rem;
+    padding-top: 3rem;
+    width: 15rem;
+}
+
+/* Estilos específicos para sidebar dentro de aside */
+aside {
+    height: 100vh;
+    width: 15rem;
+    flex-shrink: 0;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #2B3D49;
     box-shadow: var(--box-shadow);
     border-radius: 15px;
     height: 88vh;
     position: relative;
-    top: 1.5rem;
+    top: 7rem;
     transition: all 0.3s ease;
 }
 
-aside .sidebar:hover{
-    box-shadow: none;
-}
-
-aside .sidebar a{
+aside .sidebar a {
     display: flex;
     align-items: center;
-    color: var(--color-info-dark);
+    color: var(--color-white);
     height: 3.7rem;
     gap: 1rem;
     position: relative;
@@ -181,56 +334,83 @@ aside .sidebar a{
     transition: all 0.3s ease;
 }
 
-aside .sidebar a span{
+aside .sidebar a span {
     font-size: 1.6rem;
     transition: all 0.3s ease;
 }
 
-aside .sidebar a:last-child{
+aside .sidebar a:last-child {
     position: absolute;
     bottom: 2rem;
     width: 100%;
 }
 
-aside .sidebar a.active{
-    width: 100%;
-    color: var(--color-primary);
+aside .sidebar a.active {
+    color: #0A2B59;
     background-color: var(--color-light);
-    margin-left: 0;
 }
 
-aside .sidebar a.active::before{
+aside .sidebar a.active::before {
     content: '';
     width: 6px;
     height: 18px;
     background-color: var(--color-primary);
 }
 
-aside .sidebar a.active span{
+aside .sidebar a.active span {
     color: var(--color-primary);
     margin-left: calc(1rem - 3px);
 }
 
-aside .sidebar a:hover{
-    color: var(--color-primary);
+aside .sidebar a:hover {
+    color: #FF8343;
 }
 
-aside .sidebar a:hover span{
+aside .sidebar a:hover span {
     margin-left: 0.6rem;
 }
 
-aside .sidebar .message-count{
-    background-color: var(--color-danger);
+aside .sidebar .message-count {
     padding: 2px 6px;
     color: var(--color-white);
     font-size: 11px;
     border-radius: var(--border-radius-1);
 }
 
-main{
-    margin-top: 1.4rem;
+/* Tipografía para títulos dentro de aside */
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
 }
 
+h3 {
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+.container {
+    display: flex; /* Habilita Flexbox para alinear los hijos */
+    gap: 20px; /* Espaciado entre el aside (sidebar) y el main */
+}
+
+aside {
+    width: 250px; /* Ajusta el ancho del sidebar */
+    background-color: #f4f4f4; /* Opcional: fondo para distinguir */
+    padding: 10px; /* Espaciado interno */
+}
+.user-profile .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+main {
+    flex: 1; /* Toma el espacio restante disponible */
+    padding: 20px; /* Espaciado interno para el contenido */
+    background-color: #ffffff; /* Opcional: fondo para diferenciar */
+    margin-top: 20px;
+}
+/*SUBIR DESDE AQUI PARA ARRIBA*/
 main .analyse{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -383,20 +563,6 @@ main .total-cash .cash-list .cash img{
     margin-bottom: 0.4rem;
     border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 main .recent-orders{
     margin-top: 1.3rem;
@@ -593,7 +759,24 @@ main .recent-orders a{
     align-items: center;
     gap: 0.6rem;
 }
+header {
+    display: flex;
+    align-items: center;
+}
 
+/* Logo y texto de "Bienvenido" */
+header .logo {
+    flex-shrink: 0; /* Asegura que el logo no se reduzca */
+}
+
+header h2 {
+    font-size: 1.5rem;
+    flex-grow: 1; /* Para que el texto ocupe el espacio disponible */
+    margin-left: 33rem; /* Margen a la izquierda */
+    color: white; /* Color del texto */
+    font-size: 2rem; /* Tamaño de fuente */
+}
+/* Ajustes del logo para ser más flexible en dispositivos pequeños */
 @media screen and (max-width: 1200px) {
     .container{
         width: 95%;
@@ -764,4 +947,143 @@ main .recent-orders a{
         font-size: 2rem;
     }
 
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .right-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .money, .cash {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .sidebar a h3 {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .profile-photo img {
+        width: 40px;
+    }
+
+    .user-profile .logo img {
+        width: 60px;
+    }
+
+    .sidebar a {
+        justify-content: flex-start;
+    }
+
+    .right-section {
+        padding: 10px;
+    }
+}
+/* Tabletas: entre 768px y 1024px */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 150px;
+    }
+
+    .right-section {
+        width: 250px;
+    }
+
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .money, .cash {
+        width: 45%;
+    }
+
+    .sidebar a h3 {
+        font-size: 16px;
+    }
+}
+/* Pantallas grandes: de 1025px en adelante (escritorios) */
+@media (min-width: 1025px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .right-section {
+        width: 300px;
+    }
+
+    .money, .cash {
+        width: 30%;
+    }
+
+    .analyse, .new-money, .total-cash {
+        justify-content: space-between;
+    }
+}
+@media (max-width: 1024px) {
+    .profile .info p {
+        font-size: 0.8rem; /* Reduce el tamaño del texto "Hola, Andreow" */
+    }
+    .profile .info p b {
+        font-size: 0.9rem; /* Reduce el tamaño del nombre */
+    }
+    .profile .info small {
+        font-size: 0.7rem; /* Reduce el tamaño de "perfil" */
+    }
+}
+@media (max-width: 1024px) {
+    header h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del texto "Bienvenido" */
+        margin-left: 15rem; /* Ajusta el margen hacia la izquierda */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Permite que los elementos dentro del header se ajusten */
+    }
+
+    header h2 {
+        font-size: 1rem; /* Reduce aún más el tamaño del texto */
+        margin-left: 0; /* Resetea el margen izquierdo */
+        text-align: center; /* Centra el texto si hay espacio disponible */
+        flex: 1; /* Permite que el texto ocupe todo el espacio disponible */
+    }
+
+    .logo img {
+        max-width: 4rem; /* Reduce el tamaño del logo */
+        height: auto; /* Ajusta la altura proporcionalmente */
+    }
 }
