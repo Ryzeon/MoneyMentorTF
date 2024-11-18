@@ -99,7 +99,7 @@
             const $text = $newMessage.querySelector('p')
 
             $text.textContent = text
-            $who.textContent = sender === 'bot' ? 'W_AI' : 'Tú'
+            $who.textContent = sender === 'bot' ? 'WAI' : 'Tú'
             $newMessage.classList.add(sender)
 
             $messages.appendChild($newMessage)
@@ -157,7 +157,7 @@
 
 
             <div class="sidebar">
-                <a href="#" id=inicio_sidebar>
+                <a href="acceso.html" id=inicio_sidebar>
                     <span class="material-icons-sharp">
                         home
                     </span>
@@ -207,13 +207,13 @@
                     </span>
                     <h3>Foro</h3>
                 </a>
-                <a href="#">
+                <a href="Perfil.html">
                     <span class="material-icons-sharp">
                         add
                     </span>
-                    <h3>add</h3>
+                    <h3>Perfil</h3>
                 </a>
-                <a href="#">
+                <a href="index.html">
                     <span class="material-icons-sharp">
                         logout
                     </span>
@@ -231,7 +231,7 @@
                 <div class="chatbox">
                     <div class="chat-header">
                         <img src="ihc_tf/Public/Assets/Img/robot2.png" alt="WealthyAI" class="avatar">
-                        <span class="username">Hola, Andreow!</span>
+                        <span class="username">Hola!</span>
                     </div>
                     <div class="chat-principal">
                         <ul>
@@ -243,7 +243,7 @@
                         </ul>
                     </div>
                     <form class="chat-input">
-                        <input type="text" placeholder="Consulta algo">
+                        <input class="chat-input-box" type="text" placeholder="Consulta algo">
                         <button>Enviar</button>
                     </form>
                     <template id="message-template">
@@ -259,7 +259,7 @@
 
     </div>
 
-    <script src="jss/chatbot.js"></script>
+    <script src="ihc_tf/Public/Assets/Scripts/chatbot.js"></script>
 </body>
 
 </html>
